@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeBase.Item
 {
     public class DragAndDrop : MonoBehaviour, IItems
     {
-        [SerializeField] private Criterion _criterion;
+        [FormerlySerializedAs("_criterion")] [SerializeField] private BasketTypeID _basketTypeID;
 
-        public Criterion Criterion => _criterion;
+        public BasketTypeID BasketTypeID => _basketTypeID;
         private Vector3 _mousePosition;
         private Falling _component;
 

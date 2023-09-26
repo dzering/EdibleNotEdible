@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using CodeBase.Factories;
+using CodeBase.Infrastructure.Factories;
 using CodeBase.Infrastructure.Services;
-using CodeBase.Logic;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -11,7 +10,7 @@ namespace CodeBase.Infrastructure.States
         private Dictionary<Type, IExitState> _states;
         private IExitState _activeState;
 
-        public GameStateMachine(SceneLoader sceneLoader, AllServices allServices)
+        public GameStateMachine(SceneLoader.SceneLoader sceneLoader, AllServices allServices)
         {
             _states = new Dictionary<Type, IExitState>()
             {

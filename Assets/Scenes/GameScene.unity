@@ -815,7 +815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e0828200fdd4e0e8714eb342d17059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lives: {fileID: 1503373433}
   TriggerObserver: {fileID: 1379745176}
 --- !u!212 &799207642
 SpriteRenderer:
@@ -1075,28 +1074,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1368899827}
-  - component: {fileID: 1368899826}
+  - component: {fileID: 1368899828}
   m_Layer: 0
-  m_Name: Game
+  m_Name: GameBootstrapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1368899826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368899825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aafbb0b4fe04a401f86293739facdb1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _placeForInstantiateItem: {fileID: 423685427}
-  Delay: 10
 --- !u!4 &1368899827
 Transform:
   m_ObjectHideFlags: 0
@@ -1112,6 +1097,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1368899828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368899825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdaf53278dd843a3a97913245bb72a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1379745172
 GameObject:
   m_ObjectHideFlags: 0

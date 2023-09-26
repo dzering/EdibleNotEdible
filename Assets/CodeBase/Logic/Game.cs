@@ -1,4 +1,5 @@
-using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.SceneLoader;
+using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.States;
 
 namespace CodeBase.Logic

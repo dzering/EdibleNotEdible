@@ -1,7 +1,4 @@
-using System;
-using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.States;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace CodeBase.Logic

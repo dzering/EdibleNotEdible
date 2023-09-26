@@ -2,6 +2,6 @@ namespace CodeBase
 {
     public interface IItems
     {
-        Criterion Criterion { get; }
+        BasketTypeID BasketTypeID { get; }
     }
 }

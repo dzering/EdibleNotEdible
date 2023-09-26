@@ -1,4 +1,5 @@
-using CodeBase.Factories;
+using CodeBase.Infrastructure.Factories;
+using CodeBase.Infrastructure.StaticData;
 using UnityEngine;
 
 namespace CodeBase.Spawners
@@ -11,9 +12,9 @@ namespace CodeBase.Spawners
             _gameFactory = gameFactory;
         }
 
-        public void Spawn(Vector3 position)
+        public async void SpawnAsync(ItemTypeID typeID, Vector3 position)
         {
-            _gameFactory.CreateGameItem(position);
+            await _gameFactory.CreateGameItemAsync(typeID, position);
         }
     }
 }

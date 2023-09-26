@@ -1,8 +1,8 @@
 namespace CodeBase.Infrastructure.AssetManagement
 {
-    public static class AssetPath
+    public static class AssetAddress
     {
         public const string BASKET = "Basket";
-        public const string ITEM = "item";
+        public const string ITEM = "Item";
     }
 }

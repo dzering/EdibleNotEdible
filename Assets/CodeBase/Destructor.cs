@@ -1,4 +1,3 @@
-using CodeBase.Data;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Logic;
 using UnityEngine;

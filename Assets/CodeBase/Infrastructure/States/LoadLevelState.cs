@@ -1,18 +1,16 @@
-using CodeBase.Factories;
-using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.Factories;
 using CodeBase.Infrastructure.Services;
-using CodeBase.Infrastructure.States;
 
-namespace CodeBase.Logic
+namespace CodeBase.Infrastructure.States
 {
     public class LoadLevelState : IState
     {
         private readonly IGameFactory _gameFactory;
-        private readonly SceneLoader _sceneLoader;
+        private readonly SceneLoader.SceneLoader _sceneLoader;
         private readonly GameStateMachine _gameStateMachine;
         private readonly IProgressService _progressService;
 
-        public LoadLevelState(SceneLoader sceneLoader,GameStateMachine gameStateMachine, IGameFactory gameFactory,
+        public LoadLevelState(SceneLoader.SceneLoader sceneLoader,GameStateMachine gameStateMachine, IGameFactory gameFactory,
             IProgressService progressService)
         {
             _gameFactory = gameFactory;

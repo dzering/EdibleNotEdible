@@ -2,20 +2,21 @@ using CodeBase.Data;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Logic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeBase.Baskets
 {
     [RequireComponent(typeof(TriggerObserver))]
     public class Basket : MonoBehaviour
     {
-        [SerializeField] private Criterion _criterion;
+        [FormerlySerializedAs("_criterion")] [SerializeField] private BasketTypeID _basketTypeID;
         private PlayerProgress _playerProgress;
         private TriggerObserver _observer;
 
-        public void Construct(IProgressService progressService, Criterion criterion)
+        public void Construct(IProgressService progressService, BasketTypeID basketTypeID)
         {
             _playerProgress = progressService.PlayerProgress;
-            _criterion = criterion;
+            _basketTypeID = basketTypeID;
         }
 
         private void Awake()
@@ -27,7 +28,7 @@ namespace CodeBase.Baskets
         private void Check(Collider2D obj)
         {
             IItems item = obj.GetComponentInParent<IItems>();
-            if (_criterion == item.Criterion)
+            if (_basketTypeID == item.BasketTypeID)
                 Scoring();
             else
                 Damaging();

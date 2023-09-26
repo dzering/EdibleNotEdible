@@ -1,13 +1,13 @@
-using CodeBase.Data;
-using CodeBase.Infrastructure;
+using System.Threading.Tasks;
 using CodeBase.Infrastructure.Services;
+using CodeBase.Infrastructure.StaticData;
 using UnityEngine;
 
-namespace CodeBase.Factories
+namespace CodeBase.Infrastructure.Factories
 {
     public interface IGameFactory : IService
     {
-        GameObject CreateGameItem(Vector3 position);
-        GameObject CreateBasket(Vector3 position, IProgressService progressService, Criterion criterion);
+        Task<GameObject> CreateGameItemAsync(ItemTypeID typeID, Vector3 position);
+        GameObject CreateBasket(Vector3 position, IProgressService progressService, BasketTypeID basketTypeID);
     }
 }
